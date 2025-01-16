@@ -23,8 +23,7 @@ def openFile(filePath):
 
 def main():
     print("Hello world!")
-    arr1 = openFile("day1_input.txt")[0]
-    arr2 = openFile("day1_input.txt")[1]
+    arr1, arr2 = openFile("data/day1_input.txt")
 
     arr1.sort()
     arr2.sort()

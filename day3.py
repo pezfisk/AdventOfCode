@@ -11,12 +11,12 @@ def main():
 
         if test_string == "mul(":
             parCheck = 0
-            print("\n")
+            print("\nmul( string found")
             while parCheck < 9:
                 print(data[i + parCheck + 3])
                 if data[i + parCheck + 3] == ")":
                     print("mul found")
-                    print(parCheck)
+                    #print(parCheck)
 
                     mulString = ""
                     mulArray = []
@@ -27,7 +27,7 @@ def main():
                         e += 1
 
                     charIndex = mulString.find(",")
-                    print(charIndex)
+                    #print(charIndex)
                     if charIndex != -1:
                         print("Valid mult found")
                         mulArray = mulString[::-1].split(",")
@@ -35,7 +35,8 @@ def main():
                         print(mulArray)
 
                         totalMultiplication += int(mulArray[0]) * int(mulArray[1])
-
+                    else:
+                        print("Invalid mult found")
                     parCheck = 10
 
                 parCheck += 1
